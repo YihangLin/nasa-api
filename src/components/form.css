@@ -1,0 +1,35 @@
+.date-picker {
+  /* margin: 1rem auto 0; */
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.date-picker span {
+  font-size: 1rem;
+  color: black;
+}
+
+.date-picker input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
+.date-picker button {
+  /* margin: 0 auto; */
+  /* align-self: center; */
+  /* display: block; */
+  font-size: 1rem;
+  padding: .5em 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1025px) {
+ .date-picker span {
+   display: block;
+   margin-bottom: .5em;
+ }
+}

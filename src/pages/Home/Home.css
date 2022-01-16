@@ -1,0 +1,12 @@
+.home-container {
+  max-width: 90%;
+  margin: 0 auto;
+  min-height: calc(100vh - var(--navHeight) - var(--navHeight));
+}
+
+@media screen and (min-width: 1025px) {
+ .home-container {
+   max-width: 50%;
+ } 
+  
+}
