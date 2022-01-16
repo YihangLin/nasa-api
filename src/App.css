@@ -1,0 +1,16 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.disable-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1025px){
+  .disable-scroll {
+    height: auto;
+    overflow: visible;
+  }
+}
