@@ -13,7 +13,7 @@ export default function Home() {
         {isPending && <Loading />}
         {error && <div className='error'>{error}</div>}
         <div className='home-title'>
-          <h1>APOD</h1>
+          <h1>Spacestagram</h1>
           <span>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</span>
         </div>
         

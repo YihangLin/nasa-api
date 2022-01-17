@@ -15,7 +15,7 @@ export default function Liked() {
       {(likedApods && likedApods.length !== 0) && 
         <div className='home'>
           <div className='home-title'>
-            <h1>APOD</h1>
+            <h1>Spacestagram</h1>
             <span>Brought to you by NASA's Astronomy Picture of the Day (APOD) API</span>
           </div>
           {likedApods.map((pod) => (
