@@ -2,6 +2,8 @@
   height: var(--navHeight);
   background-color: var(--navColor);
   border-bottom: 1px solid var(--focusColor);
+  position: relative;
+  z-index: 2;
 }
 
 .desktop-navbar {
