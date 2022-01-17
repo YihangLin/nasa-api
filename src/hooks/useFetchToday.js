@@ -10,7 +10,7 @@ export const useFetchToday = () => {
     const fetchData = async () => {
 
       try {
-        const res = await fetch('https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt', { 
+        const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`, { 
           signal: controller.signal 
         });
 

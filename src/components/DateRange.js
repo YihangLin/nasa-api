@@ -13,9 +13,9 @@ export default function DateRange() {
     e.preventDefault();
 
     if (endDate) {
-      fetchData(`https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt&start_date=${startDate}&end_date=${endDate}`);
+      fetchData(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&start_date=${startDate}&end_date=${endDate}`);
     } else {
-      fetchData(`https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt&start_date=${startDate}&end_date=${currentDate}`);
+      fetchData(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&start_date=${startDate}&end_date=${currentDate}`);
     }
   }
 

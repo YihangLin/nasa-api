@@ -11,7 +11,7 @@ export default function SpecificDate() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    fetchData(`https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt&date=${date}`);
+    fetchData(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}`);
   }
 
   useEffect(() => {
