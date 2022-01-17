@@ -1,5 +1,5 @@
 # Spacetagram
-This project was built using NASA's APOD(Astronomy Picture of the Day).  
+This project was built using NASA's APOD(Astronomy Picture of the Day) API.  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Basic Features
