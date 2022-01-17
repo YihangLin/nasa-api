@@ -1,15 +1,13 @@
 .date-picker {
-  /* margin: 1rem auto 0; */
   margin-top: .5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
 }
 
 .date-picker span {
   font-size: 1rem;
-  color: black;
+  color: var(--highlightColor);
 }
 
 .date-picker input {
@@ -19,17 +17,39 @@
 }
 
 .date-picker button {
-  /* margin: 0 auto; */
-  /* align-self: center; */
-  /* display: block; */
   font-size: 1rem;
   padding: .5em 0;
   cursor: pointer;
+  background-color: var(--navColor);
+  color: var(--highlightColor);
+  border: 1px solid var(--focusColor);
+}
+
+input[type=number], input[type=date] {
+  background-color: var(--navColor);
+  color: grey;
+  border:  1px solid grey;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type=number]:focus, input[type=date]:focus {
+  border: 1px solid var(--focusColor);
+  color: var(--highlightColor);
 }
 
 @media screen and (min-width: 1025px) {
+  .date-picker {
+    width: 300px;
+  }
+
  .date-picker span {
    display: block;
    margin-bottom: .5em;
  }
+
 }

@@ -2,10 +2,13 @@
 
 :root {
   --navHeight: 8vh;
-  --mainColor: #062f66;
-  --sidebarColor: #678bff;
+  --navColor: #0A0F1A;
+  --focusColor: #3f7285;
   --lightTextColor: #545454;
-  --borderColor: #d8d8d8;
+  --highlightColor: #D0E2F8;
+  --backgroundColorCenter: #16295b;
+  --backgroundColorLight: #112147;
+  --backgroundColorDark: #0c121e;
 }
 
 * {

@@ -1,12 +1,44 @@
 .home-container {
-  max-width: 90%;
-  margin: 0 auto;
   min-height: calc(100vh - var(--navHeight) - var(--navHeight));
 }
 
-@media screen and (min-width: 1025px) {
- .home-container {
-   max-width: 50%;
+.home {
+  max-width: 96%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.home-title {
+  color: var(--highlightColor);
+}
+
+.home-title span {
+  font-size: .75rem;
+}
+
+.home-liked-images {
+  max-width: 90%;
+  margin: 3rem auto 0;
+  color: var(--highlightColor);
+  text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+  .home {
+    max-width: 70%;
  } 
-  
+}
+
+
+@media screen and (min-width: 1025px) {
+ .home {
+    max-width: 50%;
+ } 
+}
+
+@media screen and (min-width: 1920px) {
+  .home {
+    max-width: 30%;
+  }
 }

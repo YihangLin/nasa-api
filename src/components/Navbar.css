@@ -1,7 +1,7 @@
 .navbar-container {
-  /* height: 8vh; */
   height: var(--navHeight);
-  background-color: var(--mainColor);
+  background-color: var(--navColor);
+  border-bottom: 1px solid var(--focusColor);
 }
 
 .desktop-navbar {
@@ -31,7 +31,6 @@
   top: 0;
   left: 0;
   height: 100%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,17 +46,7 @@
     display: none;
   }
 
-  /* .navbar-container {
-    height: auto;
-    min-height: var(--navHeight);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  } */
-
   .desktop-navbar {
-    /* min-height: 8vh; */
     display: flex;
     max-width: 80%;
     margin: 0 auto;
@@ -66,18 +55,15 @@
     height: 100%;
   }
 
-  
-
   .desktop-logo {
     width: 3rem;
   }
 
   .desktop-navbar ul {
     display: flex;
-    color: white;
+    color: var(--highlightColor);
     font-size: 1.25rem;
     gap: 1.25em;
-    /* height: 100%; */
   }
 
 
@@ -86,47 +72,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    /* justify-content: center; */
   }
 
-
-
-  /* .desktop-input { */
-    /* position: absolute;
-    background-color: var(--sidebarColor);
-    left: -50%;
-    width: 200%;
-    display: flex;
-    justify-content: center; */
-    /* align-items: flex-start; */
-    /* align-items: flex-start; */
-    /* width: 100%; */
-    
-    /* width: 100vw; */
-  /* } */
-  .desktop-datepicker {
-    position: absolute;
-    top: var(--navHeight);
-    left: 0;
-    width: 100%;
-    display: flex;
-    background-color: var(--sidebarColor);
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1em 0;
-    gap: 1rem
-  }
-
-  .desktop-close {
-    width: 2rem;
-    cursor: pointer;
-    /* padding: 1em; */
-    /* display: inline-block; */
-    /* align-self: flex-start; */
-
-  }
-
-  /* .desktop-close img {
-    width: 2rem;
-  } */
 }

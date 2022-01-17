@@ -1,29 +1,21 @@
 import { useState, useEffect } from "react";
-// import { useFetch } from "../hooks/useFetchUrl";
 import { useFetchUrl } from "../hooks/useFetchUrl";
+
 import './form.css';
 
 export default function SpecificDate() {
   const [date, setDate] = useState('');
   const [currentDate, setCurrentDate] = useState(null);
-  // const { retrieveByDate } = useFetch('date');
   const { fetchData } = useFetchUrl();
-
-  // console.log(date);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // console.log(date);
-    // console.log('Test date: ', date < currentDate);
-
     fetchData(`https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt&date=${date}`);
-    // setShowPicker(false);
-
-    // retrieveByDate(date);
   }
 
   useEffect(() => {
+    //get today's date in format YYYY-MM-DD
     const today = new Date();
     const current = today.getFullYear() + '-' + (('0' + today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
@@ -36,6 +28,7 @@ export default function SpecificDate() {
         <span>Date:</span>
         <input type="date"
           required
+          min='1995-06-16'
           max={currentDate}
           onChange={(e) => setDate(e.target.value)}
           value={date}

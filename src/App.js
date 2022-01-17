@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-
+import { useDataContext } from './hooks/useDataContext';
 
 import './App.css';
 import Home from './pages/Home/Home';
@@ -8,19 +7,18 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Liked from './pages/Liked/Liked';
-
-// import Loading from './components/Loading';
-
+import Picker from './components/Picker';
 
 function App() {
-  const [sidebar, setSidebar] = useState(false);
-
+  const { showSidebar } = useDataContext()
 
   return (
-    <div className={`App ${sidebar ? 'disable-scroll' : ''}`}>
+    //mobile size: disable scroll if sidebar is open
+    <div className={`App ${showSidebar ? 'disable-scroll' : ''}`}>
       <BrowserRouter>
-      <Navbar setSidebar={setSidebar}/>
-      <Sidebar sidebar={sidebar} setSidebar={setSidebar}/>
+      <Navbar />
+      <Picker />
+      <Sidebar />
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/liked' element={ <Liked /> } />
