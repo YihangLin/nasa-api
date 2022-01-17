@@ -7,14 +7,16 @@ import Count from './Count';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDataContext } from '../hooks/useDataContext';
 
-export default function Sidebar({ sidebar, setSidebar }) {
+export default function Sidebar() {
   const [date, setDate] = useState(false);
   const [range, setRange] = useState(false);
   const [count, setCount] = useState(false);
+  const { dispatch, showSidebar } = useDataContext();
 
   return (
-    <div className={`mobile-sidebar-container ${sidebar ? '' : 'mobile-sidebar-disable'}`}>
+    <div className={`mobile-sidebar-container ${showSidebar ? '' : 'mobile-sidebar-disable'}`}>
       <div className='mobile-sidebar'>
         <ul>
           <li>
@@ -38,11 +40,11 @@ export default function Sidebar({ sidebar, setSidebar }) {
             </div>
             {count && <Count />}
           </li>
-          <li><Link to='/liked'>Liked Images</Link></li>
+          <li><Link to='/liked' onClick={()=> dispatch({ type: 'UPDATE_SHOW_SIDEBAR', payload: false })}>Liked Images</Link></li>
         </ul>
       </div>
       
-      <div className='mobile-close-sidebar' onClick={()=> setSidebar(false)}></div>
+      <div className='mobile-close-sidebar' onClick={()=> dispatch({ type: 'UPDATE_SHOW_SIDEBAR', payload: false })}></div>
     </div>
   )
 }

@@ -8,12 +8,10 @@ export default function Count() {
   const [count, setCount] = useState(0);
   const { fetchData } = useFetchUrl();
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     fetchData(`https://api.nasa.gov/planetary/apod?api_key=zbx76pkENqyu42zyIpuPVRyckxWYdO7LdH9t8rVt&count=${count}`);
-    // console.log(count);
   }
 
   return (
@@ -23,6 +21,7 @@ export default function Count() {
         <input type="number"
           required
           min='1'
+          max='100'
           onChange={(e) => setCount(e.target.value)}
           value={count}
         />

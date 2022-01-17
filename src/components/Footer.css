@@ -1,6 +1,6 @@
 footer {
   height: var(--navHeight);
-  background-color: var(--mainColor);
+  background-color: var(--navColor);
   color: white;
   margin-top: 2rem;
   font-size: 1.5rem;

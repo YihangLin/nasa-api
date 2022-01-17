@@ -1,6 +1,15 @@
 .App {
   position: relative;
   min-height: 100vh;
+  /* background-color: var(--backgroundColor); */
+  /* background: radial-gradient(59.58% 59.58% at 52% 40%, var(--backgroundColor) 20.74%, var(--navColor) 100%); */
+  /* background: radial-gradient(59.45% 63.45% at 35.31% 50%, var(--backgroundColor) 20.74%, var(--navColor) 100%); */
+  /* background: radial-gradient(circle, var(--backgroundColor) 75%, var(--navColor) 100%); */
+  /* background: radial-gradient(var(--navColor), var(--backgroundColor)); */
+  /* background: radial-gradient(circle, var(--navColor) 0%, var(--backgroundColor) 100%); */
+  background: radial-gradient(circle, var(--backgroundColorCenter) 0%, var(--backgroundColorLight) 50%, var(--backgroundColorDark) 100%);
+
+
 }
 
 .disable-scroll {
